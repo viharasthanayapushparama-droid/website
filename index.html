@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,122 +10,117 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
 <style>
-
 html{scroll-behavior:smooth;}
-
 body{
-font-family:'Noto Sans Sinhala',sans-serif;
-background:#FFFDF7;
-padding-top:70px;
-color:#3E3E3E;
+  font-family:'Noto Sans Sinhala',sans-serif;
+  background:#FFFDF7;
+  padding-top:70px;
+  color:#3E3E3E;
 }
 
 /* NAVBAR */
 .navbar{
-background:#fff !important;
-border-bottom:3px solid #D4AF37;
+  background:#fff !important;
+  border-bottom:3px solid #D4AF37;
 }
 .navbar a{color:#3E3E3E !important;}
 .nav-link:hover{color:#D4AF37 !important;}
 
 /* HERO */
 .hero{
-background:
-linear-gradient(rgba(212,175,55,0.65),rgba(0,0,0,0.55)),
-url('https://images.unsplash.com/photo-1599409636295-0a5c4f3b1f27');
-background-size:cover;
-background-position:center;
-height:100vh;
-color:#FFF8E1;
-display:flex;
-align-items:center;
-text-align:center;
+  background:
+    linear-gradient(rgba(212,175,55,0.65),rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1599409636295-0a5c4f3b1f27');
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+  color:#FFF8E1;
+  display:flex;
+  align-items:center;
+  text-align:center;
 }
 
 /* Dharma wheel */
 .chakra{
-font-size:40px;
-animation:rotateWheel 12s linear infinite;
+  font-size:40px;
+  animation:rotateWheel 12s linear infinite;
 }
 @keyframes rotateWheel{
-from{transform:rotate(0);}
-to{transform:rotate(360deg);}
+  from{transform:rotate(0);}
+  to{transform:rotate(360deg);}
 }
 
 /* TITLES */
 .section-title{
-font-weight:bold;
-margin-bottom:30px;
+  font-weight:bold;
+  margin-bottom:30px;
 }
 .section-title::after{
-content:"";
-width:80px;
-height:3px;
-background:#D4AF37;
-display:block;
-margin:10px auto;
+  content:"";
+  width:80px;
+  height:3px;
+  background:#D4AF37;
+  display:block;
+  margin:10px auto;
 }
 
 /* CARDS */
 .card{
-border-radius:20px;
-border:2px solid #D4AF37;
-background:#fff;
-transition:0.3s;
+  border-radius:20px;
+  border:2px solid #D4AF37;
+  background:#fff;
+  transition:0.3s;
 }
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 20px rgba(212,175,55,0.5);
+  transform:translateY(-8px);
+  box-shadow:0 0 20px rgba(212,175,55,0.5);
 }
 
 /* BUTTON */
 .btn-warning{
-background:#D4AF37;
-border:none;
-color:white;
+  background:#D4AF37;
+  border:none;
+  color:white;
 }
 .btn-warning:hover{background:#C49B2A;}
 
 /* FLOWERS TOP ONLY */
 .flowers{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:35vh;
-pointer-events:none;
-overflow:hidden;
-z-index:9999;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:35vh;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:9999;
 }
 
 .flower{
-position:absolute;
-top:-40px;
-color:white;
-animation:fall linear infinite;
+  position:absolute;
+  top:-40px;
+  width:30px;
+  height:30px;
+  pointer-events:none;
+  animation:fall linear infinite;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-image:url('https://upload.wikimedia.org/wikipedia/commons/4/40/White_daisy_flower.png');
+  opacity:0.8;
 }
 
 @keyframes fall{
-0%{transform:translateY(-40px) rotate(0);opacity:0;}
-10%{opacity:1;}
-100%{transform:translateY(35vh) rotate(180deg);opacity:0;}
-}
-
-/* GALLERY */
-.carousel img{
-height:450px;
-object-fit:cover;
-border-radius:15px;
-border:4px solid #D4AF37;
+  0%{transform:translateY(-40px) rotate(0); opacity:0;}
+  10%{opacity:1;}
+  100%{transform:translateY(35vh) rotate(180deg); opacity:0;}
 }
 
 /* FOOTER */
 .footer{
-background:#5D4037;
-color:#FFF8E1;
-padding:30px 0;
+  background:#5D4037;
+  color:#FFF8E1;
+  padding:30px 0;
 }
-
 </style>
 </head>
 
@@ -137,19 +131,11 @@ padding:30px 0;
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top shadow">
 <div class="container">
-
-<a class="navbar-brand fw-bold" id="navBrand">
-Sri Pushparama Dhamma School
-</a>
-
-<button class="btn btn-warning ms-3" onclick="toggleLanguage()" id="langBtn">
-සිංහල
-</button>
-
+<a class="navbar-brand fw-bold" id="navBrand">Sri Pushparama Dhamma School</a>
+<button class="btn btn-warning ms-3" onclick="toggleLanguage()" id="langBtn">සිංහල</button>
 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
 <span class="navbar-toggler-icon"></span>
 </button>
-
 <div class="collapse navbar-collapse" id="nav">
 <ul class="navbar-nav ms-auto">
 <li class="nav-item"><a class="nav-link" href="#home" id="navHome">Home</a></li>
@@ -164,19 +150,10 @@ Sri Pushparama Dhamma School
 <!-- HERO -->
 <section class="hero" id="home">
 <div class="container">
-<h1 class="display-4 fw-bold" id="heroTitle">
-Welcome to Sri Pushparama Dhamma School
-</h1>
-
+<h1 class="display-4 fw-bold" id="heroTitle">Welcome to Sri Pushparama Dhamma School</h1>
 <p class="chakra">☸️</p>
-
-<p class="lead" id="heroText">
-Guiding Children with Wisdom, Discipline & Compassion
-</p>
-
-<a href="#about" class="btn btn-warning btn-lg mt-3" id="heroBtn">
-Learn More
-</a>
+<p class="lead" id="heroText">Guiding Children with Wisdom, Discipline & Compassion</p>
+<a href="#about" class="btn btn-warning btn-lg mt-3" id="heroBtn">Learn More</a>
 </div>
 </section>
 
@@ -184,9 +161,7 @@ Learn More
 <section class="py-5 text-center" id="about" style="background:#FFF8E1;">
 <div class="container">
 <h2 class="section-title" id="aboutTitle">About Our School</h2>
-<p id="aboutText">
-Our Sunday Dhamma School provides spiritual and moral education for children according to the teachings of Lord Buddha.
-</p>
+<p id="aboutText">Our Sunday Dhamma School provides spiritual and moral education according to the teachings of Lord Buddha.</p>
 </div>
 </section>
 
@@ -194,17 +169,9 @@ Our Sunday Dhamma School provides spiritual and moral education for children acc
 <section class="py-5 text-center" id="contact">
 <div class="container">
 <h2 class="section-title" id="contactTitle">Contact Us</h2>
-<p id="contactText">
-Email: SriPushparamaDhammaSchool@gmail.com | Phone: 071-1234567
-</p>
-
-<div class="mt-4">
+<p id="contactText">Email: SriPushparamaDhammaSchool@gmail.com | Phone: 071-1234567</p>
 <iframe src="https://www.google.com/maps?q=Colombo%20Temple&output=embed"
-width="100%" height="350"
-style="border:0;border-radius:15px;"
-loading="lazy"></iframe>
-</div>
-
+width="100%" height="350" style="border:0;border-radius:15px;" loading="lazy"></iframe>
 </div>
 </section>
 
@@ -219,73 +186,57 @@ loading="lazy"></iframe>
 
 <!-- LANGUAGE TOGGLE -->
 <script>
-
 let isSinhala=false;
-
 function toggleLanguage(){
-
 isSinhala=!isSinhala;
 const btn=document.getElementById("langBtn");
-
 if(isSinhala){
-
 btn.innerText="English";
 navBrand.innerText="ශ්‍රී පුෂ්පාරම දහම් පාසල";
 navHome.innerText="මුල් පිටුව";
 navAbout.innerText="අප ගැන";
 navPrograms.innerText="වැඩසටහන්";
 navContact.innerText="සම්බන්ධ වන්න";
-
 heroTitle.innerText="ශ්‍රී පුෂ්පාරම දහම් පාසලට සාදරයෙන් පිළිගනිමු";
 heroText.innerText="ප්‍රඥාව, ශීලය සහ කරුණාව සමඟ දරුවන් ගොඩනඟමු";
 heroBtn.innerText="වැඩි විස්තර";
-
 aboutTitle.innerText="අපගේ පාසල ගැන";
 aboutText.innerText="අපගේ ඉරිදා දහම් පාසල බුදු දහම අනුව දරුවන්ට ආධ්‍යාත්මික සහ සදාචාර අධ්‍යාපනය ලබාදෙයි.";
-
 contactTitle.innerText="අප සමඟ සම්බන්ධ වන්න";
 footerText.innerText="🛕 ශ්‍රී පුෂ්පාරම දහම් පාසල";
-
 }else{
-
 btn.innerText="සිංහල";
 navBrand.innerText="Sri Pushparama Dhamma School";
 navHome.innerText="Home";
 navAbout.innerText="About";
 navPrograms.innerText="Programs";
 navContact.innerText="Contact";
-
 heroTitle.innerText="Welcome to Sri Pushparama Dhamma School";
 heroText.innerText="Guiding Children with Wisdom, Discipline & Compassion";
 heroBtn.innerText="Learn More";
-
 aboutTitle.innerText="About Our School";
-aboutText.innerText="Our Sunday Dhamma School provides spiritual and moral education for children according to the teachings of Lord Buddha.";
-
+aboutText.innerText="Our Sunday Dhamma School provides spiritual and moral education according to the teachings of Lord Buddha.";
 contactTitle.innerText="Contact Us";
 footerText.innerText="🛕 Sri Pushparama Dhamma School";
 }
-
 }
-
 </script>
 
-<!-- FLOWERS SCRIPT -->
+<!-- FALLING FLOWERS -->
 <script>
 function createFlower(){
-const flower=document.createElement("div");
-flower.classList.add("flower");
-flower.innerHTML="❀";
-flower.style.left=Math.random()*100+"vw";
-flower.style.fontSize=(12+Math.random()*12)+"px";
-flower.style.animationDuration=(12+Math.random()*10)+"s";
-flower.style.opacity=Math.random()*0.6+0.3;
-document.querySelector(".flowers").appendChild(flower);
-setTimeout(()=>flower.remove(),22000);
+  const flower=document.createElement("div");
+  flower.classList.add("flower");
+  flower.style.left=Math.random()*100+"vw";
+  flower.style.width=(20+Math.random()*15)+"px";
+  flower.style.height=(20+Math.random()*15)+"px";
+  flower.style.animationDuration=(12+Math.random()*10)+"s";
+  flower.style.opacity=Math.random()*0.6+0.3;
+  document.querySelector(".flowers").appendChild(flower);
+  setTimeout(()=>flower.remove(),22000);
 }
 setInterval(createFlower,1200);
 </script>
 
 </body>
 </html>
-
