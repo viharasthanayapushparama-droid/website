@@ -1,9 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Sri Pushparama Dhamma School</title>
 
 <!-- Sinhala Font -->
@@ -15,7 +15,6 @@
 
 <style>
 
-/* Smooth scroll */
 html{scroll-behavior:smooth;}
 
 body{
@@ -25,7 +24,7 @@ padding-top:70px;
 color:#3E3E3E;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar{
 background:#ffffff !important;
 border-bottom:3px solid #D4AF37;
@@ -33,7 +32,7 @@ border-bottom:3px solid #D4AF37;
 .navbar a{color:#3E3E3E !important;}
 .nav-link:hover{color:#D4AF37 !important;}
 
-/* Hero */
+/* HERO */
 .hero{
 background:
 linear-gradient(rgba(212,175,55,0.65),rgba(0,0,0,0.55)),
@@ -57,7 +56,7 @@ from{transform:rotate(0);}
 to{transform:rotate(360deg);}
 }
 
-/* Titles */
+/* TITLES */
 .section-title{
 font-weight:bold;
 margin-bottom:30px;
@@ -71,7 +70,7 @@ display:block;
 margin:10px auto;
 }
 
-/* Cards */
+/* CARDS */
 .card{
 border-radius:20px;
 border:2px solid #D4AF37;
@@ -83,7 +82,7 @@ transform:translateY(-8px);
 box-shadow:0 0 20px rgba(212,175,55,0.5);
 }
 
-/* Buttons */
+/* BUTTON */
 .btn-warning{
 background:#D4AF37;
 border:none;
@@ -93,7 +92,7 @@ color:white;
 background:#C49B2A;
 }
 
-/* Gallery */
+/* GALLERY */
 .carousel img{
 height:450px;
 object-fit:cover;
@@ -101,17 +100,47 @@ border-radius:15px;
 border:4px solid #D4AF37;
 }
 
-/* Footer */
+/* FOOTER */
 .footer{
 background:#5D4037;
 color:#FFF8E1;
 padding:30px 0;
 }
 
+/* 🌼 Falling Flowers */
+.flowers{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:9999;
+}
+
+.flower{
+position:absolute;
+top:-50px;
+color:white;
+font-size:18px;
+animation:fall linear infinite;
+opacity:0.9;
+}
+
+@keyframes fall{
+0%{transform:translateY(-50px) rotate(0deg);opacity:0;}
+10%{opacity:1;}
+100%{transform:translateY(110vh) rotate(360deg);opacity:0;}
+}
+
 </style>
 </head>
 
 <body>
+
+<!-- FLOWERS -->
+<div class="flowers"></div>
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top shadow">
@@ -149,20 +178,16 @@ padding:30px 0;
 <section class="py-5 text-center" id="about" style="background:#FFF8E1;">
 <div class="container">
 <h2 class="section-title">About Our School</h2>
-<p>
-Our Sunday Dhamma School provides spiritual and moral education
-according to the teachings of Lord Buddha.
-</p>
+<p>Our Sunday Dhamma School provides spiritual and moral education according to the teachings of Lord Buddha.</p>
 </div>
 </section>
 
 <!-- PROGRAMS -->
-<section class="py-5" id="programs">
-<div class="container text-center">
+<section class="py-5 text-center" id="programs">
+<div class="container">
 <h2 class="section-title">Our Programs</h2>
 
 <div class="row">
-
 <div class="col-md-4 mb-4">
 <div class="card p-3">
 <h5><i class="bi bi-book"></i> Buddhist Teachings</h5>
@@ -183,7 +208,6 @@ according to the teachings of Lord Buddha.
 <p>Vesak, Poson and religious programs.</p>
 </div>
 </div>
-
 </div>
 </div>
 </section>
@@ -228,32 +252,11 @@ according to the teachings of Lord Buddha.
 <h2 class="section-title">Upcoming Events</h2>
 
 <div class="row">
-
-<div class="col-md-4">
-<div class="card p-3">
-<h5>🌕 Vesak Program</h5>
-<p>Bhakti Gee | Lantern Exhibition | Dansala</p>
-<p><strong>Date:</strong> May 23</p>
-</div>
+<div class="col-md-4"><div class="card p-3"><h5>🌕 Vesak Program</h5><p>Bhakti Gee | Lantern Exhibition | Dansala</p><p><strong>Date:</strong> May 23</p></div></div>
+<div class="col-md-4"><div class="card p-3"><h5>🙏 Poson Program</h5><p>Sil Campaign | Dhamma Sermon</p><p><strong>Date:</strong> June 21</p></div></div>
+<div class="col-md-4"><div class="card p-3"><h5>🧘 Meditation Day</h5><p>Full Day Meditation Program</p><p><strong>Date:</strong> July 10</p></div></div>
 </div>
 
-<div class="col-md-4">
-<div class="card p-3">
-<h5>🙏 Poson Program</h5>
-<p>Sil Campaign | Dhamma Sermon</p>
-<p><strong>Date:</strong> June 21</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card p-3">
-<h5>🧘 Meditation Day</h5>
-<p>Full Day Meditation Program</p>
-<p><strong>Date:</strong> July 10</p>
-</div>
-</div>
-
-</div>
 </div>
 </section>
 
@@ -261,18 +264,13 @@ according to the teachings of Lord Buddha.
 <section class="py-5 text-center" id="contact">
 <div class="container">
 <h2 class="section-title">Contact Us</h2>
+<p>Email: SriPushparamaDhammaSchool@gmail.com<br>Phone: 071-1234567</p>
 
-<p>Email: SriPushparamaDhammaSchool@gmail.com<br>
-Phone: 071-1234567</p>
-
-<!-- GOOGLE MAP -->
 <div class="mt-4">
-<iframe
-src="https://www.google.com/maps?q=Colombo%20Temple&output=embed"
+<iframe src="https://www.google.com/maps?q=Colombo%20Temple&output=embed"
 width="100%" height="350"
 style="border:0;border-radius:15px;"
-loading="lazy">
-</iframe>
+loading="lazy"></iframe>
 </div>
 
 </div>
@@ -287,7 +285,24 @@ loading="lazy">
 </div>
 </footer>
 
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Falling Flowers Script -->
+<script>
+function createFlower(){
+const flower=document.createElement("div");
+flower.classList.add("flower");
+flower.innerHTML="❀";
+flower.style.left=Math.random()*100+"vw";
+flower.style.fontSize=(12+Math.random()*18)+"px";
+flower.style.animationDuration=(5+Math.random()*8)+"s";
+document.querySelector(".flowers").appendChild(flower);
+setTimeout(()=>{flower.remove();},13000);
+}
+setInterval(createFlower,500);
+</script>
 
 </body>
 </html>
+```
